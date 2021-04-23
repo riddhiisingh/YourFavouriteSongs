@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Add your song!</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}" >
+
+
+  </head>
+
+  <body>
+    <br>
+    <br>
+
+    <div class="container">
+
+      <form action="/process" method="post">
+        <div class="form-group">
+          <label name="artist">Artist</label>
+          <input type="text" id="inputName" name="artist" class="form-control" placeholder="" required autofocus>
+        </div>
+        <div class="form-group">
+          <label name="song" >Song</label>
+            <textarea class="form-control"name="song" rows="2" id="song" placeholder="" required></textarea>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit!</button>
+      </form>
+
+    </div>
+
+  </body>
+</html>
